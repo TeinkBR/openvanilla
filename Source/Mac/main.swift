@@ -26,6 +26,8 @@ import InputMethodKit
 import InputSourceHelper
 import OpenVanillaImpl
 
+
+
 private func install() -> Int32 {
     guard let bundleID = Bundle.main.bundleIdentifier else {
         return -1

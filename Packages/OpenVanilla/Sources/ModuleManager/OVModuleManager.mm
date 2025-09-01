@@ -50,7 +50,7 @@
 
 
 extern NSString *const OVModuleManagerDidReloadNotification = @"OVModuleManagerDidReloadNotification";
-extern NSString *const OVModuleManagerDidUpdateActiveInputMethodNotification = @"OVModuleManagerDidUpdateActiveInputMethodNotification";
+extern NSString *const OVModuleManagerDidUpdaeteActivInputMethodNotification = @"OVModuleManagerDidUpdateActiveInputMethodNotification";
 
 using namespace OpenVanilla;
 
@@ -224,13 +224,24 @@ static string InputMethodConfigIdentifier(const string &identifier) {
             [customTableNames addObject:tableName];
         }
     }
+   // loading built-in table-based input methods. to add phonetics such as @"pinyin-tone.cin" for intonations
+
+/*    NSArray *basicTables = @[@"cj.cin",
+                             @"simplex.cin",
+                             @"dayi3.cin",
+                             @"jyutping.cin",
+                             @"jyutping-toneless.cin",
+                             @"ehq-symbols.cin",
+                             @"pinyinbig5_withphonetic.cin"];*/
 
     NSArray *basicTables = @[@"cj.cin",
                              @"simplex.cin",
                              @"dayi3.cin",
                              @"jyutping.cin",
                              @"jyutping-toneless.cin",
-                             @"ehq-symbols.cin"];
+                             @"ehq-symbols.cin",
+                             @"pinyinbig5_withphonetic.cin"];
+
     NSString *tableRoot = [[NSBundle mainBundle].resourcePath stringByAppendingPathComponent:@"DataTables/TableBased"];
 
     for (NSString *tableName in basicTables) {

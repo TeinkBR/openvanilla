@@ -1,0 +1,105 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "CandidateUI-arm64-apple-macosx15.0-debug.module": ["<CandidateUI-arm64-apple-macosx15.0-debug.module>"]
+  "InputSourceHelper-arm64-apple-macosx15.0-debug.module": ["<InputSourceHelper-arm64-apple-macosx15.0-debug.module>"]
+  "OpenVanillaCLI-arm64-apple-macosx15.0-debug.module": ["<OpenVanillaCLI-arm64-apple-macosx15.0-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "TooltipUI-arm64-apple-macosx15.0-debug.module": ["<TooltipUI-arm64-apple-macosx15.0-debug.module>"]
+  "VXHanConvert-arm64-apple-macosx15.0-debug.module": ["<VXHanConvert-arm64-apple-macosx15.0-debug.module>"]
+  "main": ["<OpenVanillaCLI-arm64-apple-macosx15.0-debug.module>"]
+  "test": ["<OpenVanillaCLI-arm64-apple-macosx15.0-debug.module>"]
+default: "main"
+nodes:
+  "/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Source/CLI/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/CandidateUI.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Packages/CandidateUI/Sources/CandidateUI/CandidateController.swift","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Packages/CandidateUI/Sources/CandidateUI/HorizontalCandidateController.swift","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Packages/CandidateUI/Sources/CandidateUI/VerticalCandidateController.swift"]
+    outputs: ["/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/CandidateUI.build/sources"]
+    description: "Write auxiliary file /Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/CandidateUI.build/sources"
+
+  "/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/InputSourceHelper.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Packages/InputSourceHelper/Sources/InputSourceHelper/InputSourceHelper.swift"]
+    outputs: ["/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/InputSourceHelper.build/sources"]
+    description: "Write auxiliary file /Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/InputSourceHelper.build/sources"
+
+  "/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/OpenVanillaCLI.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Source/CLI/main.swift"]
+    outputs: ["/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/OpenVanillaCLI.build/sources"]
+    description: "Write auxiliary file /Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/OpenVanillaCLI.build/sources"
+
+  "/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/TooltipUI.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Packages/TooltipUI/Sources/TooltipUI/TooltipController.swift"]
+    outputs: ["/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/TooltipUI.build/sources"]
+    description: "Write auxiliary file /Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/TooltipUI.build/sources"
+
+  "/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Library/Developer/CommandLineTools/usr/bin/swiftc"]
+    outputs: ["/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+
+  "<CandidateUI-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/Modules/CandidateUI.swiftmodule"]
+    outputs: ["<CandidateUI-arm64-apple-macosx15.0-debug.module>"]
+
+  "<InputSourceHelper-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/Modules/InputSourceHelper.swiftmodule"]
+    outputs: ["<InputSourceHelper-arm64-apple-macosx15.0-debug.module>"]
+
+  "<OpenVanillaCLI-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/Modules/OpenVanillaCLI.swiftmodule"]
+    outputs: ["<OpenVanillaCLI-arm64-apple-macosx15.0-debug.module>"]
+
+  "<TooltipUI-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/Modules/TooltipUI.swiftmodule"]
+    outputs: ["<TooltipUI-arm64-apple-macosx15.0-debug.module>"]
+
+  "C.CandidateUI-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Packages/CandidateUI/Sources/CandidateUI/CandidateController.swift","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Packages/CandidateUI/Sources/CandidateUI/HorizontalCandidateController.swift","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Packages/CandidateUI/Sources/CandidateUI/VerticalCandidateController.swift","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/CandidateUI.build/sources"]
+    outputs: ["/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/Modules/CandidateUI.swiftmodule"]
+    description: "Compiling Swift Module 'CandidateUI' (3 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","CandidateUI","-emit-dependencies","-emit-module","-emit-module-path","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/Modules/CandidateUI.swiftmodule","-output-file-map","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/CandidateUI.build/output-file-map.json","-parse-as-library","-incremental","@/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/CandidateUI.build/sources","-I","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx10.13","-enable-batch-mode","-index-store-path","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/CandidateUI.build/CandidateUI-Swift.h","-swift-version","5","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-F","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g"]
+
+  "C.InputSourceHelper-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Packages/InputSourceHelper/Sources/InputSourceHelper/InputSourceHelper.swift","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/InputSourceHelper.build/sources"]
+    outputs: ["/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/Modules/InputSourceHelper.swiftmodule"]
+    description: "Compiling Swift Module 'InputSourceHelper' (1 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","InputSourceHelper","-emit-dependencies","-emit-module","-emit-module-path","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/Modules/InputSourceHelper.swiftmodule","-output-file-map","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/InputSourceHelper.build/output-file-map.json","-parse-as-library","-incremental","@/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/InputSourceHelper.build/sources","-I","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx10.13","-enable-batch-mode","-index-store-path","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/InputSourceHelper.build/InputSourceHelper-Swift.h","-swift-version","5","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-F","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g"]
+
+  "C.OpenVanillaCLI-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Source/CLI/main.swift","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/Modules/InputSourceHelper.swiftmodule","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/Modules/CandidateUI.swiftmodule","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/Modules/TooltipUI.swiftmodule","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Packages/VXHanConvert/Sources/VXHanConvert/include/VXHanConvert.h","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/OpenVanillaCLI.build/sources"]
+    outputs: ["/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/Modules/OpenVanillaCLI.swiftmodule"]
+    description: "Compiling Swift Module 'OpenVanillaCLI' (1 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","OpenVanillaCLI","-emit-dependencies","-emit-module","-emit-module-path","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/Modules/OpenVanillaCLI.swiftmodule","-output-file-map","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/OpenVanillaCLI.build/output-file-map.json","-incremental","@/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/OpenVanillaCLI.build/sources","-I","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx10.15","-enable-batch-mode","-index-store-path","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-Xcc","-fmodule-map-file=/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/VXHanConvert.build/module.modulemap","-Xcc","-I","-Xcc","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Packages/VXHanConvert/Sources/VXHanConvert/include","-module-cache-path","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-swift-version","6","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-F","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","openvanilla"]
+
+  "C.TooltipUI-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Packages/TooltipUI/Sources/TooltipUI/TooltipController.swift","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/TooltipUI.build/sources"]
+    outputs: ["/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/Modules/TooltipUI.swiftmodule"]
+    description: "Compiling Swift Module 'TooltipUI' (1 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","TooltipUI","-emit-dependencies","-emit-module","-emit-module-path","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/Modules/TooltipUI.swiftmodule","-output-file-map","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/TooltipUI.build/output-file-map.json","-parse-as-library","-incremental","@/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/TooltipUI.build/sources","-I","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx10.13","-enable-batch-mode","-index-store-path","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/.build/index-build/arm64-apple-macosx/debug/TooltipUI.build/TooltipUI-Swift.h","-swift-version","5","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-F","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Source/CLI/","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Package.swift","/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

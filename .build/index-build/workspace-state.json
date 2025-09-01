@@ -1,0 +1,69 @@
+{
+  "object" : {
+    "artifacts" : [
+
+    ],
+    "dependencies" : [
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "candidateui",
+          "kind" : "fileSystem",
+          "location" : "/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Packages/CandidateUI",
+          "name" : "CandidateUI"
+        },
+        "state" : {
+          "name" : "fileSystem",
+          "path" : "/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Packages/CandidateUI"
+        },
+        "subpath" : "candidateui"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "inputsourcehelper",
+          "kind" : "fileSystem",
+          "location" : "/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Packages/InputSourceHelper",
+          "name" : "InputSourceHelper"
+        },
+        "state" : {
+          "name" : "fileSystem",
+          "path" : "/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Packages/InputSourceHelper"
+        },
+        "subpath" : "inputsourcehelper"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "tooltipui",
+          "kind" : "fileSystem",
+          "location" : "/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Packages/TooltipUI",
+          "name" : "TooltipUI"
+        },
+        "state" : {
+          "name" : "fileSystem",
+          "path" : "/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Packages/TooltipUI"
+        },
+        "subpath" : "tooltipui"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "vxhanconvert",
+          "kind" : "fileSystem",
+          "location" : "/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Packages/VXHanConvert",
+          "name" : "VXHanConvert"
+        },
+        "state" : {
+          "name" : "fileSystem",
+          "path" : "/Users/jingyili/Downloads/Pinyin_PROJECT/openvanilla/Packages/VXHanConvert"
+        },
+        "subpath" : "vxhanconvert"
+      }
+    ],
+    "prebuilts" : [
+
+    ]
+  },
+  "version" : 7
+}
